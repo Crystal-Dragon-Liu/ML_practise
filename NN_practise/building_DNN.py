@@ -52,21 +52,22 @@ def initialize_parameters(n_x,n_h,n_y):
     '''
     w1 = np.random.randn(n_h, n_x) * 0.01
     b1 = np.random.randn((n_h, 1))
-    w2 = np.random.randn(n_y,n_h)* 0.01
-    b2 = np.random.randn((n_y,1))
+    w2 = np.random.randn(n_y, n_h) * 0.01
+    b2 = np.random.randn((n_y, 1))
 
     #使用断言确保我的数据格式是正确的
 
-    assert(w1.shape==(n_h,n_x))
-    assert(b1.shape==(n_h,1))
-    assert(w2.shape==(n_y,n_h))
-    assert(b2.shape==(n_y,1))
+    assert(w1.shape == (n_h, n_x))
+    assert(b1.shape == (n_h, 1))
+    assert(w2.shape == (n_y, n_h))
+    assert(b2.shape == (n_y, 1))
 
     parameters = {
 
-        "w1":w1,
-        "b1":b1,
-        "w2":w2,
-        "b2":b2
+        "w1": w1,
+        "b1": b1,
+        "w2": w2,
+        "b2": b2
     }
     return parameters
+print("ah")
