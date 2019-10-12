@@ -1,0 +1,140 @@
+QHeaderView
+
+{
+    border:none;
+    border-bottom:3px solid rgb(125,158,192);
+    background:rgb(125,158,192);
+    min-height:30px;
+    border-radius:4px;
+
+}
+QHeaderView::section:horizontal
+{
+    border:none;
+    color:white;
+    background:transparent;
+    border-radius:4px;
+}
+QHeaderView::section:vertical
+{
+    border:none;
+    color:white;
+    background:transparent;
+    border-radius:4px;
+
+}
+QHeaderView::section:horizontal:hover
+{
+
+    background:rgb(171,130,255);
+    border-radius:4px;
+
+}
+QHeaderView::section:horizontal:pressed
+{
+
+    background:rgb(188,143,143);
+    border-radius:4px;
+
+}
+QHeaderView::section:vertical:hover
+{
+
+    background:rgb(230,39,39);
+
+}
+QHeaderView::section:vertical:pressed
+{
+
+    background:rgb(255,0,0);
+
+
+}
+QTableWidget
+{
+    border:1px  rgb(142,142,142);
+    selction-background-color:qlineargradient(x1:0,y1:0,x2:0.5,y2:0.5,stop:0 rgb(230,39,39),stop:1 rgb(57,58,60));
+
+
+
+}
+QComboBox
+{
+    height:25px;
+    border-radius:4px;
+
+}
+QComboBox:enabled
+{
+    color:white;
+    background:rgb(57,58,60);
+
+
+}
+QComboBox:enabled:hover
+{
+    background:rgb(0,180,250);
+
+}
+QComboBox:disabled
+{
+
+    background:rgb(100,100,100);
+    color:rgb(200,200,200);
+}
+QComboBox::drop-down
+{
+    border:none;
+    background:transparent;
+
+}
+QProgressBar
+{
+
+    border:none;
+    text-align:center;
+    color:black;
+    border-radius:4px;
+
+
+}
+QProgressBar::chunk
+{
+    background:rgb(238,130,238);
+    border-radius:4px;
+
+}
+QTextEdit
+{
+    border:1px  rgb(45,45,45);
+    color:rgb(57,58,60);
+    font-family: Î¢ÈíÑÅºÚ;
+
+
+}
+QPushButton
+{
+
+    border-radius:4px;
+    border:none;
+    width:75px;
+    height:25px;
+    color:white;
+    background:rgb(57,58,60);
+
+
+}
+QPushButton:enabled:hover
+{
+    background:rgb(230,39,39);
+}
+QPushButton:enabled:pressed
+{
+    background:rgb(255,0,0);
+}
+QPushButton:disabled
+{
+
+    background:rgb(100,100,100);
+    color:rgb(200,200,200);
+}

@@ -1,0 +1,2 @@
+model_checkpoint_path: "F:/python/marchine_learning_note/TF_learning/projector/projector/a_amodel.ckpt-1001"
+all_model_checkpoint_paths: "F:/python/marchine_learning_note/TF_learning/projector/projector/a_amodel.ckpt-1001"

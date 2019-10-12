@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import testCase
 import dnn_utils
 import ir_utils
-
 '''
 
 初始化网络参数
@@ -31,11 +30,7 @@ import ir_utils
 更新参数
 
 '''
-
-
-
 #初始化参数练习
-
 np.random.seed(1)
 #两层网络初始化练习
 def initialize_parameters(n_x,n_h,n_y):
@@ -107,7 +102,6 @@ def initialize_para_deep(layer_dims):
 
 
     return parameter
-
 #前向传播
 '''
 前向传播有以下三个步骤
@@ -120,6 +114,7 @@ LINEAR - >ACTIVATION，其中激活函数将会使用ReLU或Sigmoid。
 Z[l]=W[l]A[l−1]+b[l](3)
  
 '''
+
 #两层网络前向传播——线性部分
 def  linear_forward(A, W ,b ):
     '''
@@ -147,6 +142,7 @@ def  linear_forward(A, W ,b ):
     cache = (A,W,b)
 
     return Z,cache
+
 #两层网络前向传播--线性激活部分
 def linear_activation_forward(A_pre, W, b, activation):
     '''
@@ -208,7 +204,57 @@ def L_model_forward(X,parameters):
     assert(AL.shape == (1, X.shape[1]))
     return AL, caches
 
+#计算成本
+def compute_cost(AL,Y):
 
+    '''
+
+
+实施等式（4）定义的成本函数。
+
+    参数：
+        AL - 与标签预测相对应的概率向量，维度为（1，示例数量）
+        Y - 标签向量（例如：如果不是猫，则为0，如果是猫则为1），维度为（1，数量）
+
+    返回：
+        cost - 交叉熵成本
+
+    '''
+
+    m = Y.shape[1]
+    cost = -np.sum(np.multiply(np.log(AL),Y)+np.multiply(np.log(1-AL),1-Y)) / m
+
+    cost = np.squeeze(cost)#从数组的形状中删除单维条目，即把shape中为1的维度去掉
+
+    assert(cost.shape ==())
+    return cost
+
+#反向传播
+
+def linear_backward(dZ,cache):
+    '''
+
+   为单层实现反向传播的线性部分（第L层）
+
+    参数：
+         dZ - 相对于（当前第l层的）线性输出的成本梯度
+         cache - 来自当前层前向传播的值的元组（A_prev，W，b）
+
+    返回：
+         dA_prev - 相对于激活（前一层l-1）的成本梯度，与A_prev维度相同
+         dW - 相对于W（当前层l）的成本梯度，与W的维度相同
+         db - 相对于b（当前层l）的成本梯度，与b维度相同
+
+    '''
+
+
+
+#print(Y.shape)
+'''
+Y = np.asarray([[1, 1, 1]])
+aL = np.array([[.8,.9,0.4]])
+
+'''
 
 '''
 #两层网络初始化练习
@@ -245,5 +291,13 @@ X, parameters = testCase.L_model_forward_test_case()
 AL, caches = L_model_forward(X, parameters)
 print("AL: "+str(AL))
 print("cache长度为"+str(len(caches)))
+
+
+#计算成本
+print("=====compute_cost=====")
+Y,AL = testCase.compute_cost_test_case()
+cost = compute_cost(AL, Y)
+print("cost = "+str(cost))
+
 '''
 
