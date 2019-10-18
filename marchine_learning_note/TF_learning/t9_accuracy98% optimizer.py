@@ -1,5 +1,7 @@
+
 #-*- coding: utf-8 -*-
 import tensorflow as tf
+import tensorflow.compat.v1 as tf
 #98% accuracy
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("F:/python/marchine_learning_note/MINST_test_set_images",one_hot=True)

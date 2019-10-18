@@ -58,6 +58,8 @@ markers[unknown==255] = 0
 markers = cv2.watershed(img_bgr,markers)
 img_bgr[markers == -1] = [250,206,135]
 
+
+
 afterwatershed = cv2.convertScaleAbs(markers)
 
 colorTab = np.zeros((np.max(markers)+1,3))

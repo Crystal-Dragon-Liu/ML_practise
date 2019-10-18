@@ -2,7 +2,7 @@
 import tensorflow as tf
 import os
 import tarfile
-import requests
+import request
 
 inception_pretrain_model_url = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'
 #模型存放地址
